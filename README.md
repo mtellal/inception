@@ -16,7 +16,7 @@
 
 ### NGINX (  TLSV1.2/3 )
 
-https://www.frameip.com/ssl-tls/ - (fr) tres bon article pour comprendre comment fonctionnent ssl-tls
+https://www.frameip.com/ssl-tls/ - (fr) tres bon article pour comprendre comment fonctionne ssl-tls
 
 https://social.technet.microsoft.com/wiki/contents/articles/15189.difference-between-self-signed-ssl-certificate-authority.aspx - diff ssl self-signed cert / certificate authority
 
