@@ -34,7 +34,7 @@ https://en.wikipedia.org/wiki/Self-signed_certificate - ssl self-signed certific
 - https://stackoverflow.com/questions/19414832/how-can-i-pull-the-ssl-certificate-from-a-remote-server
 - https://stackoverflow.com/questions/18861300/how-to-run-nginx-within-a-docker-container-without-halting
 
-
+https://www.nginx.com/blog/nginx-https-101-ssl-basics-getting-started/#Overview
 
 #### Demonstrate tls1.2/3 only works 
 - `openssl s_client -tls1_2 -connect mtellal.42.fr:443` (change `-tls1_2` by `-tls1_1` should not works)
