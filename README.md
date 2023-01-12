@@ -9,7 +9,8 @@
 
 - https://stackoverflow.com/questions/37461868/difference-between-run-and-cmd-in-a-dockerfile - CMD/RUN diff 
 - https://codewithyury.com/docker-run-vs-cmd-vs-entrypoint/ CMD/RUN/ENTRYPOINT
-
+- -------------------------------------------------
+- https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-16-04
 -https://www.malekal.com/nginx-comment-activer-un-site-avec-sites-enabled-ou-nginx-modsite/ - sites-enabled/available
 
 
