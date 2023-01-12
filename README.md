@@ -1,5 +1,6 @@
 
 ## Documentations:
+
 - https://www.youtube.com/playlist?list=PLlxQJeQRaKDRC_TTW7E0Dz9xZWoxxzH3M - A quoi sert docker ? ( playlist )
 
 - https://store.dockerme.ir/E-Book/Learning_Docker.pdf
@@ -8,6 +9,9 @@
 
 - https://stackoverflow.com/questions/37461868/difference-between-run-and-cmd-in-a-dockerfile - CMD/RUN diff 
 - https://codewithyury.com/docker-run-vs-cmd-vs-entrypoint/ CMD/RUN/ENTRYPOINT
+
+-https://www.malekal.com/nginx-comment-activer-un-site-avec-sites-enabled-ou-nginx-modsite/ - sites-enabled/available
+
 
 ### NGINX (  TLSV1.2/3 )
 
@@ -40,6 +44,7 @@ https://en.wikipedia.org/wiki/Self-signed_certificate - ssl self-signed certific
 - https://knowledge.digicert.com/solution/SO16297.html - certificate chain 
 - https://serverfault.com/questions/9708/what-is-a-pem-file-and-how-does-it-differ-from-other-openssl-generated-key-file - format and standard for certificates (pem, crt, key ...)
 
+-----------------------------------------------------------------------------------------------------------------------------
 
 ### WORDPRESS PHP
 
@@ -66,3 +71,9 @@ https://en.wikipedia.org/wiki/Self-signed_certificate - ssl self-signed certific
 - https://github.com/llescure/42_Inception
 
 - https://github.com/vbachele/Inception
+
+----------------------------------------------------------------------------------------------------------------------------
+
+### MARIADB 
+
+- https://mariadb.com/kb/en/ - docs "official" mariadb 
