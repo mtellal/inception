@@ -83,7 +83,7 @@ http://txt.fliglio.com/2013/11/creating-a-mysql-docker-container/
 
 #### remote connection mariadb 
 ##### docker container
-- (docker container) connect in root `mysql -u root` 
+- connect in root `mysql -u root` 
 - Grant all privileges $user (root or others) `GRANT ALL PRIVILEGES ON *.* TO '${MYSQL_USER}'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';` or from a script with `echo "GRANT ALL PRIVILEGES ON *.* TO '${MYSQL_USER}'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';" | mysql -u root`
 - flush privileges `FLUSH PRIVILEGES;`
 
