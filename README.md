@@ -80,3 +80,12 @@ https://www.nginx.com/blog/nginx-https-101-ssl-basics-getting-started/#Overview
 - https://mariadb.com/kb/en/ - docs "official" mariadb 
 
 http://txt.fliglio.com/2013/11/creating-a-mysql-docker-container/
+
+#### remote connection mariadb 
+##### docker container
+- (docker container) connect in root `mysql -u root` 
+- Grant all privileges $user (root or others) `GRANT ALL PRIVILEGES ON *.* TO '${MYSQL_USER}'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';` or from a script with `echo "GRANT ALL PRIVILEGES ON *.* TO '${MYSQL_USER}'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';" | mysql -u root`
+- flush privileges `FLUSH PRIVILEGES;`
+
+##### remote host
+- connect to server from remote host - `mysql -u root (user) -p(password) -P (port bind) -h localhost --protocol=tcp`
