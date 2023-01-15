@@ -77,6 +77,8 @@ https://www.nginx.com/blog/nginx-https-101-ssl-basics-getting-started/#Overview
 
 ### MARIADB 
 
+- https://dev.mysql.com/doc/refman/8.0/en/manual-info.html - mysql doc
+
 - https://mariadb.com/kb/en/ - docs "official" mariadb 
 
 http://txt.fliglio.com/2013/11/creating-a-mysql-docker-container/
