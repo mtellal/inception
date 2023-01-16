@@ -51,16 +51,26 @@ https://www.nginx.com/blog/nginx-https-101-ssl-basics-getting-started/#Overview
 
 #### Installation
 
--https://www.digitalocean.com/community/tutorials/install-wordpress-on-ubuntu
+- https://www.digitalocean.com/community/tutorials/install-wordpress-on-ubuntu
 
-- install wordpress `wget https://wordpress.org/latest.tar.gz` 
-- Uncompress the tarball `tar -xvf latest.tar.gz`
+- Install wordpress `wget https://wordpress.org/latest.tar.gz -O /tmp/wordpress.tar.gz` 
+
+- Uncompress the tarball `tar -xvf tmp/wordpress.tar.gz -C /var/www/html`
   - x : extract files from an archive
   - v : verbosely list files processed
   - f : --file=archive use archive file or device ARCHIVE
-- Copy the wordpress folder to /var/www/html/ path `cp -R wordpress /var/www/html/`
-  - https://www.quora.com/What-is-the-purpose-of-var-on-Linux - purpose of /var/ on linux 
+  
+- Copy the wordpress folder to `/var/www/html/ path` `cp -R wordpress /var/www/html/`
+  - more infos on /var
+    - https://www.quora.com/What-is-the-purpose-of-var-on-Linux - purpose of /var/ on linux 
+    - http://www.linfo.org/var.html 
+    - https://stackoverflow.com/questions/18514447/what-goes-in-var
 
+- Change ownership of ‘wordpress’ directory `chown -R www-data:www-data /var/www/html/wordpress/` 
+  - more infos on www-data:
+    - https://askubuntu.com/questions/873839/what-is-the-www-data-user
+
+- Change file permission `chmod -R 755 /var/www/html/wordpress/`
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
