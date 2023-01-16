@@ -49,6 +49,22 @@ https://www.nginx.com/blog/nginx-https-101-ssl-basics-getting-started/#Overview
 
 ### WORDPRESS PHP
 
+#### Installation
+
+-https://www.digitalocean.com/community/tutorials/install-wordpress-on-ubuntu
+
+- install wordpress `wget https://wordpress.org/latest.tar.gz` 
+- Uncompress the tarball `tar -xvf latest.tar.gz`
+  - x : extract files from an archive
+  - v : verbosely list files processed
+  - f : --file=archive use archive file or device ARCHIVE
+- Copy the wordpress folder to /var/www/html/ path `cp -R wordpress /var/www/html/`
+  - https://www.quora.com/What-is-the-purpose-of-var-on-Linux - purpose of /var/ on linux 
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
 - https://nginx.org/en/docs/http/configuring_https_servers.html - How to config a HTTPS server 
 - https://www.linode.com/docs/guides/create-a-self-signed-tls-certificate/ - create a tls certificate
 - https://stackoverflow.com/questions/38666191/while-loop-in-bash-that-uses-pgrep-to-check-if-service-exists - looping until ps/service die 
