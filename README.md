@@ -91,3 +91,8 @@ http://txt.fliglio.com/2013/11/creating-a-mysql-docker-container/
 
 ##### remote host
 - connect to server from remote host - `mysql -u root (user) -p(password) -P (port bind) -h localhost --protocol=tcp`
+
+
+
+### more docs 
+- http://www.linfo.org/process.html - process,life cycle etc...
