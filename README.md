@@ -95,4 +95,7 @@ http://txt.fliglio.com/2013/11/creating-a-mysql-docker-container/
 
 
 ### more docs 
+
+processes:
 - http://www.linfo.org/process.html - process,life cycle etc...
+- https://itsfoss.com/linux-daemons/ - daemons 
