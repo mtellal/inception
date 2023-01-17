@@ -105,6 +105,8 @@ or from a script with `echo "GRANT ALL PRIVILEGES ON *.* TO '${MYSQL_USER}'@'%' 
 
 - Change file permission `chmod -R 755 /var/www/html/wordpress/`
 
+- https://make.wordpress.org/cli/handbook/guides/commands-cookbook/
+- https://make.wordpress.org/cli/handbook/guides/installing/
 
 #### more docs
 
