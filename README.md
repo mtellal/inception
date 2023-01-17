@@ -57,6 +57,33 @@
 - https://knowledge.digicert.com/solution/SO16297.html - certificate chain 
 - https://serverfault.com/questions/9708/what-is-a-pem-file-and-how-does-it-differ-from-other-openssl-generated-key-file - format and standard for certificates (pem, crt, key ...)
 
+---------------------------------------------------------------------------------------------------------------------------
+
+### MARIADB 
+
+- https://dev.mysql.com/doc/refman/8.0/en/manual-info.html - mysql doc
+
+- https://mariadb.com/kb/en/ - docs "official" mariadb 
+
+http://txt.fliglio.com/2013/11/creating-a-mysql-docker-container/
+
+#### remote connection mariadb 
+##### docker container
+- connect in root `mysql -u root` 
+- Grant all privileges $user (root or others) `GRANT ALL PRIVILEGES ON *.* TO '${MYSQL_USER}'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';` or from a script with `echo "GRANT ALL PRIVILEGES ON *.* TO '${MYSQL_USER}'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';" | mysql -u root`
+- flush privileges `FLUSH PRIVILEGES;`
+
+##### remote host
+- connect to server from remote host - `mysql -u root (user) -p(password) -P (port bind) -h localhost --protocol=tcp`
+
+
+
+### more docs 
+
+processes:
+- http://www.linfo.org/process.html - process,life cycle etc...
+- https://itsfoss.com/linux-daemons/ - daemons 
+
 -----------------------------------------------------------------------------------------------------------------------------
 
 ### WORDPRESS PHP
@@ -91,33 +118,6 @@
 - https://www.php.net/manual/en/install.fpm.configuration.php - php-fpm configuration 
 - https://wordpress.org/support/article/backing-up-your-database/ - exporting/backing up data
 - https://www.php.net/manual/en/features.commandline.webserver.php - php built-in server
-
----------------------------------------------------------------------------------------------------------------------------
-
-### MARIADB 
-
-- https://dev.mysql.com/doc/refman/8.0/en/manual-info.html - mysql doc
-
-- https://mariadb.com/kb/en/ - docs "official" mariadb 
-
-http://txt.fliglio.com/2013/11/creating-a-mysql-docker-container/
-
-#### remote connection mariadb 
-##### docker container
-- connect in root `mysql -u root` 
-- Grant all privileges $user (root or others) `GRANT ALL PRIVILEGES ON *.* TO '${MYSQL_USER}'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';` or from a script with `echo "GRANT ALL PRIVILEGES ON *.* TO '${MYSQL_USER}'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';" | mysql -u root`
-- flush privileges `FLUSH PRIVILEGES;`
-
-##### remote host
-- connect to server from remote host - `mysql -u root (user) -p(password) -P (port bind) -h localhost --protocol=tcp`
-
-
-
-### more docs 
-
-processes:
-- http://www.linfo.org/process.html - process,life cycle etc...
-- https://itsfoss.com/linux-daemons/ - daemons 
 
 ------------------------------------------------------------------------------------------------------------------------------
 
