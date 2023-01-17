@@ -5,6 +5,7 @@
 sleep 1
 
 mysql -e "UPDATE mysql.user SET Password = PASSWORD('root') WHERE User = 'root'"
+mysql -u root -proot -e "CREATE DATABASE wordpress"
 mysql -u root -proot -e "GRANT ALL PRIVILEGES ON *.* TO \`root\`@'%' IDENTIFIED BY 'root'"
 mysql -e "FLUSH PRIVILEGES"
 

@@ -8,3 +8,4 @@ COPY	./conf/script.sh /home/root/script.sh
 
 RUN	chmod +x /home/root/script.sh
 
+ENTRYPOINT ["/home/root/script.sh"]
