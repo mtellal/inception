@@ -16,7 +16,7 @@
 - https://github.com/dediane/42_Inception - docker basics commands
 --------------------------------------------------------------------------------------------------------------------------
 
-### SETUP NGINX + TLSV1.2/3
+### NGINX + TLSV1.2/3
 
 - => create a certificate with openssl </br>
 `sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/private/nginx.key -out /etc/nginx/ssl/nginx.crt`
@@ -26,7 +26,7 @@
 `ssl_certificate /etc/ssl/certs/mtellal.42.fr.crt;` </br>
 `ssl_certificate_key /etc/ssl/private/mtellal.42.fr.key;`</br>
 
-#### Demonstrate tls1.2/3 only works 
+##### Demonstrate tls1.2/3 only works 
 - `openssl s_client -tls1_2 -connect mtellal.42.fr:443` (change `-tls1_2` by `-tls1_1` should not works)
 - `curl --tls1.2 https://mtellal.42.fr` get the html page (change `-tls1.2` by `-tls1.1` should fail the handshake)
   - docs for curl (https://developer.ibm.com/articles/what-is-curl-command/)
@@ -70,19 +70,13 @@ http://txt.fliglio.com/2013/11/creating-a-mysql-docker-container/
 #### remote connection mariadb 
 ##### docker container
 - connect in root `mysql -u root` 
-- Grant all privileges $user (root or others) `GRANT ALL PRIVILEGES ON *.* TO '${MYSQL_USER}'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';` or from a script with `echo "GRANT ALL PRIVILEGES ON *.* TO '${MYSQL_USER}'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';" | mysql -u root`
+- Grant all privileges $user (root or others) </br>
+`GRANT ALL PRIVILEGES ON *.* TO '${MYSQL_USER}'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';` </br>
+or from a script with `echo "GRANT ALL PRIVILEGES ON *.* TO '${MYSQL_USER}'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';" | mysql -u root` </br>
 - flush privileges `FLUSH PRIVILEGES;`
 
 ##### remote host
 - connect to server from remote host - `mysql -u root (user) -p(password) -P (port bind) -h localhost --protocol=tcp`
-
-
-
-### more docs 
-
-processes:
-- http://www.linfo.org/process.html - process,life cycle etc...
-- https://itsfoss.com/linux-daemons/ - daemons 
 
 -----------------------------------------------------------------------------------------------------------------------------
 
@@ -122,6 +116,10 @@ processes:
 ------------------------------------------------------------------------------------------------------------------------------
 
 #### MORE DOCS
+
+processes:
+- http://www.linfo.org/process.html - process,life cycle etc...
+- https://itsfoss.com/linux-daemons/ - daemons 
 
 - https://stackoverflow.com/questions/38666191/while-loop-in-bash-that-uses-pgrep-to-check-if-service-exists - looping until ps/service die 
 - https://www.adminer.org/#download - adminer download 
