@@ -29,7 +29,7 @@
 
 ##### Demonstrate tls1.2/3 only works 
 - `openssl s_client -tls1_2 -connect mtellal.42.fr:443` (change `-tls1_2` by `-tls1_1` should not works)
-- `curl --tls1.2 (-k to bypass certificate) https://mtellal.42.fr` get the html page (change `-tls1.2` by `-tls1.1` should fail the handshake)
+- `curl [--tls1.2 or --tls1.3] [-k (to bypass certificate)] https://mtellal.42.fr` get the html page (change `-tls1.2` by `-tls1.1` should fail the handshake)
   - docs for curl (https://developer.ibm.com/articles/what-is-curl-command/)
 
 #### NGINX
