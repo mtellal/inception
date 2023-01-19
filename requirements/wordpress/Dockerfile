@@ -13,11 +13,12 @@ RUN	wget https://wordpress.org/latest.tar.gz -O /tmp/wordpress.tar.gz \
 
 COPY	./conf/wp-config.php /var/www/wordpress/
 
-RUN	wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar -O /usr/bin/ 
-	&& chmod +x /usr/local/bin/wp-cli.phar 
+COPY	./conf/entrypoint.sh /usr/local/entrypoint.sh
+
+RUN	chmod +x /usr/local/entrypoint.sh \
+	&& echo "listen=9000" >> /etc/php/7.3/fpm/pool.d/www.conf
 
 
 EXPOSE 9000
 
-
-ENTRYPOINT ["/etc/init.d/php7.3-fpm", "start;"]
+ENTRYPOINT ["/usr/local/entrypoint.sh"]
