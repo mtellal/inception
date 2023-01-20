@@ -14,7 +14,13 @@
 - https://stackoverflow.com/questions/37461868/difference-between-run-and-cmd-in-a-dockerfile - CMD/RUN diff 
 - https://codewithyury.com/docker-run-vs-cmd-vs-entrypoint/ CMD/RUN/ENTRYPOINT
 - https://github.com/dediane/42_Inception - docker basics commands
+
+#### Control startup order
+##### Ensure that wordpress wait mariadb
+- https://docs.docker.com/compose/startup-order/
 - https://dev.to/ku6ryo/frequently-used-2-healthcheck-recipes-for-docker-compose-dependency-resolution-2ad9 - docker healthcheck
+
+
 --------------------------------------------------------------------------------------------------------------------------
 
 ### NGINX + TLSV1.2/3
