@@ -24,6 +24,7 @@
 
 ##### List of simple docker compose files
 - https://github.com/docker/awesome-compose 
+- https://github.com/docker/awesome-compose/blob/master/official-documentation-samples/wordpress/README.md
 
 --------------------------------------------------------------------------------------------------------------------------
 
