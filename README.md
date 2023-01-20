@@ -20,6 +20,10 @@
 - https://docs.docker.com/compose/startup-order/
 - https://dev.to/ku6ryo/frequently-used-2-healthcheck-recipes-for-docker-compose-dependency-resolution-2ad9 - docker healthcheck
 
+</br>
+
+##### List of simple docker compose files
+- https://github.com/docker/awesome-compose 
 
 --------------------------------------------------------------------------------------------------------------------------
 
