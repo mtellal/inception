@@ -34,6 +34,12 @@
 
 </br>
 
+#### Mount volume in /home/user/data
+- https://stackoverflow.com/questions/36387032/how-to-set-a-path-on-host-for-a-named-volume-in-docker-compose-yml
+- https://stackoverflow.com/questions/36312699/chown-docker-volumes-on-host-possibly-through-docker-compose/36321403#36321403
+
+</br>
+
 ##### Examples of compose files
 - https://github.com/docker/awesome-compose 
 - https://github.com/docker/awesome-compose/blob/master/official-documentation-samples/wordpress/README.md
