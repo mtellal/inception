@@ -14,6 +14,9 @@
 - https://stackoverflow.com/questions/37461868/difference-between-run-and-cmd-in-a-dockerfile - CMD/RUN diff 
 - https://codewithyury.com/docker-run-vs-cmd-vs-entrypoint/ CMD/RUN/ENTRYPOINT
 - https://github.com/dediane/42_Inception - docker basics commands
+- https://docs.docker.com/develop/
+- https://blog.diogomonica.com//2017/03/27/why-you-shouldnt-use-env-variables-for-secret-data/
+- https://12factor.net/
 
 #### Control startup order
 ##### Ensure that wordpress wait mariadb
