@@ -25,6 +25,14 @@
 
 </br>
 
+#### PID 1 AND ENTRYPOINT
+- https://petermalmgren.com/signal-handling-docker/
+- https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#entrypoint
+- https://wiki.bash-hackers.org/commands/builtin/exec
+- https://docs.docker.com/engine/reference/builder/#entrypoint
+
+</br>
+
 ##### Examples of compose files
 - https://github.com/docker/awesome-compose 
 - https://github.com/docker/awesome-compose/blob/master/official-documentation-samples/wordpress/README.md
