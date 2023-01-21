@@ -39,6 +39,9 @@
 - https://wiki.bash-hackers.org/commands/builtin/exec
 - https://docs.docker.com/engine/reference/builder/#entrypoint
 - https://www.geeksforgeeks.org/exec-command-in-linux-with-examples/
+##### ENTRYPOINT - CMD
+- https://phoenixnap.com/kb/docker-cmd-vs-entrypoint
+- https://stackoverflow.com/questions/47904974/what-are-shell-form-and-exec-form
 
 ##### Examples of compose files
 - https://github.com/docker/awesome-compose 
