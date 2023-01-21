@@ -38,6 +38,7 @@
 - https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#entrypoint
 - https://wiki.bash-hackers.org/commands/builtin/exec
 - https://docs.docker.com/engine/reference/builder/#entrypoint
+- https://www.geeksforgeeks.org/exec-command-in-linux-with-examples/
 
 ##### Examples of compose files
 - https://github.com/docker/awesome-compose 
