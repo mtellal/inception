@@ -20,10 +20,12 @@
 
 #### Docker volume
 - https://www.toolsqa.com/docker/docker-volume/
-##### Mount named volumes with driver opts
+##### Mount named volumes with driver opts - Mount volume in /home/user/data
 - https://blog.code4hire.com/2018/06/define-named-volume-with-host-mount-in-the-docker-compose-file/
 - https://stackoverflow.com/questions/62232676/docker-local-volume-driver-options
 - https://man7.org/linux/man-pages/man8/mount.8.html
+- https://stackoverflow.com/questions/36387032/how-to-set-a-path-on-host-for-a-named-volume-in-docker-compose-yml
+- https://stackoverflow.com/questions/36312699/chown-docker-volumes-on-host-possibly-through-docker-compose/36321403#36321403
 
 #### Control startup order
 ##### Ensure that wordpress wait mariadb
@@ -36,10 +38,6 @@
 - https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#entrypoint
 - https://wiki.bash-hackers.org/commands/builtin/exec
 - https://docs.docker.com/engine/reference/builder/#entrypoint
-
-#### Mount volume in /home/user/data
-- https://stackoverflow.com/questions/36387032/how-to-set-a-path-on-host-for-a-named-volume-in-docker-compose-yml
-- https://stackoverflow.com/questions/36312699/chown-docker-volumes-on-host-possibly-through-docker-compose/36321403#36321403
 
 ##### Examples of compose files
 - https://github.com/docker/awesome-compose 
