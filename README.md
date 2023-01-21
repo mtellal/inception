@@ -18,6 +18,11 @@
 - https://blog.diogomonica.com//2017/03/27/why-you-shouldnt-use-env-variables-for-secret-data/
 - https://12factor.net/
 
+#### Docker volume
+- https://www.toolsqa.com/docker/docker-volume/
+##### Mount named volumes with driver opts
+- https://blog.code4hire.com/2018/06/define-named-volume-with-host-mount-in-the-docker-compose-file/
+
 #### Control startup order
 ##### Ensure that wordpress wait mariadb
 - https://docs.docker.com/compose/startup-order/
