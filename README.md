@@ -27,6 +27,7 @@
 
 #### PID 1 - exec - entrypoint
 - https://petermalmgren.com/signal-handling-docker/
+- https://hynek.me/articles/docker-signals/
 - https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#entrypoint
 - https://wiki.bash-hackers.org/commands/builtin/exec
 - https://docs.docker.com/engine/reference/builder/#entrypoint
