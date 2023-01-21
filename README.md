@@ -14,7 +14,39 @@
 - https://stackoverflow.com/questions/37461868/difference-between-run-and-cmd-in-a-dockerfile - CMD/RUN diff 
 - https://codewithyury.com/docker-run-vs-cmd-vs-entrypoint/ CMD/RUN/ENTRYPOINT
 - https://github.com/dediane/42_Inception - docker basics commands
+- https://docs.docker.com/develop/
+- https://blog.diogomonica.com//2017/03/27/why-you-shouldnt-use-env-variables-for-secret-data/
+- https://12factor.net/
+
+#### Docker volume
+- https://www.toolsqa.com/docker/docker-volume/
+##### Mount named volumes with driver opts
+- https://blog.code4hire.com/2018/06/define-named-volume-with-host-mount-in-the-docker-compose-file/
+- https://stackoverflow.com/questions/62232676/docker-local-volume-driver-options
+- https://man7.org/linux/man-pages/man8/mount.8.html
+
+#### Control startup order
+##### Ensure that wordpress wait mariadb
+- https://docs.docker.com/compose/startup-order/
 - https://dev.to/ku6ryo/frequently-used-2-healthcheck-recipes-for-docker-compose-dependency-resolution-2ad9 - docker healthcheck
+
+#### PID 1 - exec - entrypoint
+- https://petermalmgren.com/signal-handling-docker/
+- https://hynek.me/articles/docker-signals/
+- https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#entrypoint
+- https://wiki.bash-hackers.org/commands/builtin/exec
+- https://docs.docker.com/engine/reference/builder/#entrypoint
+
+#### Mount volume in /home/user/data
+- https://stackoverflow.com/questions/36387032/how-to-set-a-path-on-host-for-a-named-volume-in-docker-compose-yml
+- https://stackoverflow.com/questions/36312699/chown-docker-volumes-on-host-possibly-through-docker-compose/36321403#36321403
+
+##### Examples of compose files
+- https://github.com/docker/awesome-compose 
+- https://github.com/docker/awesome-compose/blob/master/official-documentation-samples/wordpress/README.md
+
+</br>
+
 --------------------------------------------------------------------------------------------------------------------------
 
 ### NGINX + TLSV1.2/3
