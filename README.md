@@ -22,6 +22,8 @@
 - https://www.toolsqa.com/docker/docker-volume/
 ##### Mount named volumes with driver opts
 - https://blog.code4hire.com/2018/06/define-named-volume-with-host-mount-in-the-docker-compose-file/
+- https://stackoverflow.com/questions/62232676/docker-local-volume-driver-options
+- https://man7.org/linux/man-pages/man8/mount.8.html
 
 #### Control startup order
 ##### Ensure that wordpress wait mariadb
