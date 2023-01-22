@@ -75,6 +75,7 @@
 
 ##### FastCGI
 - https://fastcgi-archives.github.io/FastCGI_A_High-Performance_Web_Server_Interface_FastCGI.html
+- http://www.journaldunet.com/developpeur/tutoriel/cgi/070126-cgi-fastcgi-differences.shtml
 
 #### TLS ( SSL) 
 
