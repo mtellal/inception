@@ -73,6 +73,9 @@
 - https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-16-04
 - https://www.malekal.com/nginx-comment-activer-un-site-avec-sites-enabled-ou-nginx-modsite/ - sites-enabled/available
 
+##### FastCGI
+- https://fastcgi-archives.github.io/FastCGI_A_High-Performance_Web_Server_Interface_FastCGI.html
+
 #### TLS ( SSL) 
 
 - - https://www.linode.com/docs/guides/create-a-self-signed-tls-certificate/ - create a tls certificate
