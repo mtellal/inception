@@ -7,11 +7,14 @@ RUN	apt-get update && apt-get -y install \
 	-subj "/C=FR/ST=Paris/L=Paris/O=42/OU=IT/CN=mtellal.42.fr" \
 	-keyout /etc/ssl/private/mtellal.42.fr.key -out /etc/ssl/certs/mtellal.42.fr.crt
 
-COPY	./conf/mtellal.42.fr /etc/nginx/sites-available/
+COPY	./conf/wordpress /etc/nginx/sites-available/wordpress
 
-RUN	ln -s /etc/nginx/sites-available/mtellal.42.fr /etc/nginx/sites-enabled/ \
-	&& mkdir -p /var/www/wordpress
+COPY	./conf/entrypoint.sh /
 
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+RUN	ln -s /etc/nginx/sites-available/wordpress /etc/nginx/sites-enabled/ \
+	&& mkdir -p /var/www/wordpress \
+	&& chmod +x /entrypoint.sh 
+
+ENTRYPOINT ["/entrypoint.sh"]
 
 EXPOSE 443
