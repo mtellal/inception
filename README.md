@@ -95,6 +95,8 @@
 #### (more docs for nginx and ssl/tls)
 - https://knowledge.digicert.com/solution/SO16297.html - certificate chain 
 - https://serverfault.com/questions/9708/what-is-a-pem-file-and-how-does-it-differ-from-other-openssl-generated-key-file - format and standard for certificates (pem, crt, key ...)
+##### URI - (URL + URN)
+- https://www.journaldunet.fr/web-tech/developpement/1203023-quelle-est-la-difference-entre-uri-url-et-urn/
 
 ---------------------------------------------------------------------------------------------------------------------------
 
