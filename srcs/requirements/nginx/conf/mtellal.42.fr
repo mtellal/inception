@@ -14,12 +14,7 @@ server {
 
 	location ~ \.php$
 	{
-		include snippets/fastcgi-php.conf;
-		fastcgi_pass mtellal.42.fr:9000;
-		#include fastcgi_params;
-		#fastcgi_index index.php;
-		#fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-		#fastcgi_param PATH_INFO	$fastcgi_path_info;
+		fastcgi_pass wordpress:9000;
 	}
 
 }

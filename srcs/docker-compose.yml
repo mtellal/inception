@@ -1,30 +1,40 @@
-services:
+services: 
+  mariadb:
+    build: ./requirements/mariadb
+    env_file: .env
+    restart: unless-stopped
+    networks:
+      - inception-net
+    volumes:
+      - mariadb:/var/lib/mysql
+    healthcheck:
+      test: "mysql -uwordpress -pwordpress -e 'SELECT 1;'"
+      interval: 1s
+      timeout: 10s
+      retries: 15
+
+  wordpress:
+    build: ./requirements/wordpress
+    env_file: .env
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    restart: on-failure
+    networks:
+      - inception-net
+    volumes:
+      - wordpress:/var/www/wordpress
+        
   nginx:
-    image: nginx
     build: ./requirements/nginx
     env_file: .env
+    restart: on-failure
+    depends_on:
+      - wordpress
     networks:
       - inception-net
     ports:
       - 443:443
-    volumes:
-      - wordpress:/var/www/wordpress
-  
-  mariadb:
-    image: mariadb
-    build: ./requirements/mariadb
-    env_file: .env
-    networks:
-      - inception-net
-    volumes:
-      - mariadb:/var/li/mysql
-
-  wordpress:
-    image: wordpress
-    build: ./requirements/wordpress
-    env_file: .env
-    networks:
-      - inception-net
     volumes:
       - wordpress:/var/www/wordpress
 
@@ -33,13 +43,13 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: /home/$(USER)/data/mariadb
+      device: /home/${USER}/data/mariadb
 
   wordpress:
     driver_opts:
       type: none
       o: bind
-      device: /home/$(USER)/data/wordpress
+      device: /home/${USER}/data/wordpress
 
 networks:
   inception-net:

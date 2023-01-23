@@ -8,17 +8,14 @@ RUN	apt-get update && apt-get install -y \
 	mariadb-server
 
 RUN	wget https://wordpress.org/latest.tar.gz -O /tmp/wordpress.tar.gz \ 
-	&& mkdir /var/www/ \
+	&& mkdir -p /var/www/ \
 	&& tar -xvf /tmp/wordpress.tar.gz -C /var/www/
 
-COPY	./conf/wp-config.php /var/www/wordpress/
+COPY	./conf/wp-config.php /var/www/wordpress/wp-config.php
 
-COPY	./conf/entrypoint.sh /usr/local/entrypoint.sh
-
-RUN	chmod +x /usr/local/entrypoint.sh \
-	&& echo "listen=9000" >> /etc/php/7.3/fpm/pool.d/www.conf
-
+RUN	echo "listen=9000" >> /etc/php/7.3/fpm/pool.d/www.conf \
+	&& mkdir -p /run/php
 
 EXPOSE 9000
 
-ENTRYPOINT ["/usr/local/entrypoint.sh"]
+ENTRYPOINT ["/usr/sbin/php-fpm7.3", "-F"]
