@@ -6,7 +6,8 @@ COPY	./conf/conf.cnf /etc/mysql/mariadb.conf.d/conf.cnf
 
 COPY	./conf/entrypoint.sh /entrypoint.sh
 
-RUN	chmod +x /entrypoint.sh
+RUN	chmod +x /entrypoint.sh \
+	&& chmod 755 /var/lib/mysql
 
 EXPOSE 3306
 

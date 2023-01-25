@@ -9,12 +9,9 @@ RUN	apt-get update && apt-get -y install \
 
 COPY	./conf/wordpress /etc/nginx/sites-available/wordpress
 
-COPY	./conf/entrypoint.sh /
-
 RUN	ln -s /etc/nginx/sites-available/wordpress /etc/nginx/sites-enabled/ \
-	&& mkdir -p /var/www/wordpress \
-	&& chmod +x /entrypoint.sh 
+	&& mkdir -p /var/www/wordpress 
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
 
 EXPOSE 443

@@ -8,14 +8,26 @@ server {
 	ssl_certificate /etc/ssl/certs/mtellal.42.fr.crt;
     	ssl_certificate_key /etc/ssl/private/mtellal.42.fr.key;
 	
-	root /var/www/html;
+	root /var/www/wordpress;
 
-	index index.html;
+	index index.html index.php ;
 
-	#location ~ \.php$
-	#{
-	#	try_files $uri $uri/ =404;
-	#	fastcgi_pass wordpress:9000;
-	#}
 
+	location / {
+		try_files	$uri $uri/ =404;
+		index		index.php index.html;
+		autoindex	on;
+	}
+
+	location ~ \.php$ {
+		try_files	$uri $uri/ =404;
+
+		#include snippets/fastcgi-php.conf;
+		fastcgi_pass wordpress:9000;
+		include fastcgi_params;
+		fastcgi_index index.php;
+		fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+		fastcgi_param SCRIPTNAME $fastcgi_script_name;
+		fastcgi_param PATH_INFO	$fastcgi_path_info;
+	}
 }
