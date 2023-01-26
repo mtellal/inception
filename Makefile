@@ -6,32 +6,50 @@
 #    By: mtellal <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/19 16:15:37 by mtellal           #+#    #+#              #
-#    Updated: 2023/01/25 15:25:38 by mtellal          ###   ########.fr        #
+#    Updated: 2023/01/26 17:30:14 by mtellal          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 HOST_USER	=	mtellal
+PROJET_NAME	=	inception
 
 IMAGES 		= 	$(shell docker images -q)
 CONTAINERS 	= 	$(shell docker ps -aq)
 VOLUMES 	= 	$(shell docker volume ls -q)
+NETWORKS	=	$(shell docker network ls -q)
 
 all: compose
 
 compose:
-	mkdir -p /home/$(HOST_USER)/data/wordpress
+
+#	CREATE DATA DIR
+	mkdir -p /home/$(HOST_USER)/data/wordpress	
 	mkdir -p /home/$(HOST_USER)/data/mariadb
-	docker compose -f ./srcs/docker-compose.yml up
+#	COMPOSE
+	docker compose -p $(PROJET_NAME) -f ./srcs/docker-compose.yml up -d
+
+start:
+	docker compose -p $(PROJET_NAME) -f ./srcs/docker-compose.yml start
+
+stop:
+	docker compose -p $(PROJET_NAME) -f ./srcs/docker-compose.yml stop
+
 down:
-	docker compose -f ./srcs/docker-compose.yml down
+	docker compose -p $(PROJET_NAME) -f ./srcs/docker-compose.yml down
 
 clean: down
-	docker system prune --volumes -f
+	-docker system prune --volumes -f
 
 fclean: clean
+#	RM DATA DIR
 	sudo rm -rf /home/$(HOST_USER)/data	
+#	RM IMAGES
 	-docker rmi -f $(IMAGES)  
+#	RM CONTAINERS
 	-docker rm -f $(CONTAINERS)
+#	RM VOLUMES
 	-docker volume rm $(VOLUMES)
+#	RM NETWORKS
+	-docker network rm $(NETWORKS)
 
 re: fclean compose
