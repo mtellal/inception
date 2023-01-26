@@ -14,6 +14,11 @@ wp core install --path=/var/www/wordpress --allow-root \
 	--admin_email=mez.tellal@gmail.com \
 	--skip-email
 
+wp user create --path=/var/www/wordpress --allow-root \
+	$WP_USER_LOGIN \
+	$WP_USER_EMAIL \
+	--user_pass$WP_USER_PASSWORD
+
 mkdir -p /run/php
 
 exec /usr/sbin/php-fpm7.3 -F
