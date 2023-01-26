@@ -5,7 +5,14 @@ wp config create --path=/var/www/wordpress --allow-root \
 		--dbuser=$MYSQL_USER \
 		--dbpass=$MYSQL_PASSWORD \
 		--dbhost=mariadb:3306
-		
+
+wp core install --path=/var/www/wordpress --allow-root \
+	--url=https://mtellal.42.fr \
+	--title=Inception \
+	--admin_user=$WP_ADMIN_USER \
+	--admin_password=$WP_ADMIN_PASSWORD \
+	--admin_email=mez.tellal@gmail.com 
+
 mkdir -p /run/php
 
 exec /usr/sbin/php-fpm7.3 -F
