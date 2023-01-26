@@ -11,7 +11,8 @@ wp core install --path=/var/www/wordpress --allow-root \
 	--title=Inception \
 	--admin_user=$WP_ADMIN_USER \
 	--admin_password=$WP_ADMIN_PASSWORD \
-	--admin_email=mez.tellal@gmail.com 
+	--admin_email=mez.tellal@gmail.com \
+	--skip-email
 
 mkdir -p /run/php
 
