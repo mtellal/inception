@@ -43,6 +43,9 @@
 - https://phoenixnap.com/kb/docker-cmd-vs-entrypoint
 - https://stackoverflow.com/questions/47904974/what-are-shell-form-and-exec-form
 
+##### Diff containers/services
+- https://stackoverflow.com/questions/43408493/what-is-the-difference-between-docker-service-and-docker-container
+
 ##### Examples of compose files
 - https://github.com/docker/awesome-compose 
 - https://github.com/docker/awesome-compose/blob/master/official-documentation-samples/wordpress/README.md
