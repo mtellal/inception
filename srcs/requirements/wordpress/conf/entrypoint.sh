@@ -17,7 +17,7 @@ wp core install --path=/var/www/wordpress --allow-root \
 wp user create --path=/var/www/wordpress --allow-root \
 	$WP_USER_LOGIN \
 	$WP_USER_EMAIL \
-	--user_pass$WP_USER_PASSWORD
+	--user_pass=$WP_USER_PASSWORD
 
 mkdir -p /run/php
 
