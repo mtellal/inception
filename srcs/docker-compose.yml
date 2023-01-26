@@ -1,5 +1,6 @@
 services: 
   mariadb:
+    image: mariadb:1.0
     build: ./requirements/mariadb
     env_file: .env
     restart: unless-stopped
@@ -14,6 +15,7 @@ services:
       retries: 15
 
   wordpress:
+    image: wordpress:1.0
     build: ./requirements/wordpress
     env_file: .env
     depends_on:
@@ -26,6 +28,7 @@ services:
       - wordpress:/var/www/wordpress
         
   nginx:
+    image: nginx:1.0
     build: ./requirements/nginx
     env_file: .env
     restart: on-failure
