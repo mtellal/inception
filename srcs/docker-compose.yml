@@ -10,7 +10,7 @@ services:
       - mariadb:/var/lib/mysql
     healthcheck:
       test: "mysql -uwordpress -pwordpress -e 'SELECT 1;'"
-      interval: 1s
+      interval: 2s
       timeout: 10s
       retries: 15
 
