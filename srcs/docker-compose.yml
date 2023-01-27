@@ -4,13 +4,13 @@ services:
     container_name: mariadb
     build: ./requirements/mariadb
     env_file: .env
-    restart: unless-stopped
+    restart: always
     networks:
       - inception-net
     volumes:
       - mariadb:/var/lib/mysql
     healthcheck:
-      test: "mysql -uwordpress -pwordpress -e 'SELECT 1;'"
+      test: "mysql -u$MYSQL_USER -p$MYSQL_PASSWORD -e 'SELECT 1;'"
       interval: 2s
       timeout: 10s
       retries: 15
